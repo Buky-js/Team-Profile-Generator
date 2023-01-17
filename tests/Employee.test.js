@@ -1,4 +1,7 @@
 const Employee = require("../lib/Employee.js");
+
+// // tests to check the functionalities of the Employee class
+
 describe("Checking object and properties", () => {
     test("can create an instance of the Employee class", () => {
         const obj = new Employee();

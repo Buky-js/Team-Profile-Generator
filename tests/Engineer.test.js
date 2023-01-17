@@ -1,5 +1,7 @@
 const Engineer = require("../lib/Engineer.js");
 
+// // tests to check the functionalities of the Engineer class
+
 test("can create an instance of the Engineer class", () => {
     const obj = new Engineer();
     expect(typeof (obj)).toBe("object");

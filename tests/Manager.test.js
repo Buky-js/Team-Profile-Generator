@@ -1,5 +1,7 @@
 const Manager = require("../lib/Manager.js");
 
+// tests to check the functionalities of the Manager class
+
 test("can create an instance of the Manager class", () => {
     const obj = new Manager();
     expect(typeof (obj)).toBe("object");
