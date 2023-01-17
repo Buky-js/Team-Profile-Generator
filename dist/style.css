@@ -4,7 +4,7 @@
 }
 
 :root {
-    --primary: lightslategray;
+    --primary: rgb(4, 228, 253);
     --secondary: white;
 }
 
@@ -38,4 +38,9 @@ body {
     justify-content: space-evenly;
     display: flex;
     
+}
+.employee-card{
+    margin-right: 30px;
+    margin-bottom: 30px;
+    box-shadow: 5px 5px 5px rgb(114, 107, 107);
 }
