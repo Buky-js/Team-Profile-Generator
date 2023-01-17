@@ -151,7 +151,7 @@ function init() {
         });
 
     }
-
+// function to create the page and output it to a specified file path
     function creatingHTML() {
         console.log("The team has been created.")
         fs.writeFileSync(outputFilePath, createEmployees(employeeArr), "UTF-8");
