@@ -1,17 +1,17 @@
 // // creqte cards for the team
 // const createTeam = team => {
 
-const { emitWarning } = require("process");
+// const { emitWarning } = require("process");
 
 // create the manager card
-const createManager = manager => {
-    return `
-<div class="card employee-card">
-<div class="card-header bg-primary text-white">
-    <h2 class="card-title">${manager.getName()}</h2>
-    <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${manager.getRole()}</h3>
-</div>
-<div class="card-body">
+const createManager = (manager) => {
+  return `
+    <div class="card employee-card">
+        <div class="card-header bg-primary text-white">
+            <h2 class="card-title">${manager.getName()}</h2>
+            <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${manager.getRole()}</h3>
+        </div>
+        <div class="card-body">
     <ul class="list-group">
         <li class="list-group-item">ID: ${manager.getId()}</li>
         <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
@@ -23,8 +23,8 @@ const createManager = manager => {
 };
 
 // create the engineer card
-const createEngineer = engineer => {
-    return `
+const createEngineer = (engineer) => {
+  return `
     <div class="card employee-card">
     <div class="card-header bg-primary text-white">
         <h2 class="card-title">${engineer.getName()}</h2>
@@ -43,8 +43,8 @@ const createEngineer = engineer => {
 };
 
 // create intern card
-const createIntern = intern => {
-    return `
+const createIntern = (intern) => {
+  return `
     <div class="card employee-card">
     <div class="card-header bg-primary text-white">
         <h2 class="card-title">${intern.getName()}</h2>
@@ -61,51 +61,49 @@ const createIntern = intern => {
     `;
 };
 
-
 // }
 
 // push array to the page
 
 createHTML = (data) => {
-    
-    //array for cards
-    htmlArray = [];
+  //array for cards
+  htmlArray = [];
 
-    for(let i=0; i < data.length; i++) {
-        const employee = data[i];
-        const role = employee.getRole();
+  for (let i = 0; i < data.length; i++) {
+    const employee = data[i];
+    const role = employee.getRole();
 
-        // call manager function
-        if(role === 'Manager'){
-            const managerCard = createManager(employee);
-            htmlArray.push(managerCard);
-        }
-         // call engineer function
-         if (role === 'Engineer') {
-            const engineerCard = createEngineer(employee);
+    // call manager function
+    if (role === "Manager") {
+      const managerCard = createManager(employee);
+      htmlArray.push(managerCard);
+    }
+    // call engineer function
+    if (role === "Engineer") {
+      const engineerCard = createEngineer(employee);
 
-            htmlArray.push(engineerCard);
-        }
-
-        // call intern function 
-        if (role === 'Intern') {
-            const internCard = createIntern(employee);
-
-            htmlArray.push(internCard);
-        }
+      htmlArray.push(engineerCard);
     }
 
-    // putting the array strings together
-    const employeeCards = htmlArray.join('');
+    // call intern function
+    if (role === "Intern") {
+      const internCard = createIntern(employee);
 
-    //returning the page generated
-    const createTeam = createTeamPage(employeeCards);
-    return createTeam;
-}
+      htmlArray.push(internCard);
+    }
+  }
+
+  // putting the array strings together
+  const employeeCards = htmlArray.join("");
+  console.log(employeeCards);
+  //returning the page generated
+  const createTeam = createTeamPage(employeeCards);
+  return createTeam;
+};
 
 // create employee page
-const createTeamPage = function(employeeCards){
-    return `
+const createTeamPage = function (employeeCards) {
+  return `
     <!DOCTYPE html>
   <html lang="en">
   <head>
@@ -141,7 +139,7 @@ const createTeamPage = function(employeeCards){
 
 
     `;
-}
+};
 
 //export to index file
-module.exports = employeeCards;
+module.exports = createHTML(data);

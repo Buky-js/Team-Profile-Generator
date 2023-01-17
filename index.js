@@ -19,7 +19,7 @@ function init() {
             type: 'list',
             message: 'What is the role of the employee you are adding to your team?',
             name: 'addEmployee',
-            choices: ['Manager', 'Engineer', 'Intern']
+            choices: ['Manager', 'Engineer', 'Intern', 'Team members are complete']
         }]).then(function (input) {
             switch (input.addEmployee) {
                 case "Manager":
