@@ -144,4 +144,4 @@ const createTeamPage = function(employeeCards){
 }
 
 //export to index file
-module.exports = createHTML;
+module.exports = employeeCards;
