@@ -16,3 +16,9 @@ test("get the school value from getSchool function", () => {
         const newObj = new Intern("Buky", 20, "bukyjames@gmail.com", testSchool);
         expect(newObj.getSchool()).toBe(testSchool);
 })
+
+test("getRole function should return 'Intern'", () => {
+    const testRole = "Intern";
+        const newObj = new Intern("Buky", 2001, "bukyjames@gmail.com");
+        expect(newObj.getRole()).toBe(testRole);
+})
