@@ -30,7 +30,7 @@ This project is licensed under the MIT License.
 
 ## URLs
 
-The walkthrough video can be found here: 
+The walkthrough video can be found [here](https://youtube.com/watch?v=EmqZHZC23E4&si=EnSIkaIECMiOmarE) .
 
 The URL of the GitHub repository containing the code is: https://github.com/Buky-js/Team-Profile-Generator
 
